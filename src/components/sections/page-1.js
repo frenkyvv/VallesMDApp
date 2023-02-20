@@ -1,66 +1,63 @@
 import React from "react"
 import styled from "styled-components"
-import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import { Link } from "gatsby"
 import WaveBackground from "../backgrounds/WaveBackground"
 import Boton from "../botones/BotonLink"
 import Footer from "../sections/Footer"
+import Blue from "../backgrounds/BlueBack"
 
 class Inicio extends React.Component {
   render() {
     return (
-      <Layout>
-        <Wrapper>
-          <WaveBackground />
-          <Innerwrapper>
-            <Contentwrapper>
-              <SEO title="VallesMD" />
-              <TextTop>
-                <Title>Valles MD</Title>
-                <Subtitulo2>
-                  ------------------------------------------------
-                </Subtitulo2>
-                <Subtitulo>Bienvenidos a la WebApp de formulas</Subtitulo>
-
-                <ButtonWrapper>
-                  <Link to="/page-2">
-                    <Boton text="Dopamina" />
-                  </Link>
-                  <Link to="/page-3/">
-                    <Boton text="Dobutamina" />
-                  </Link>
-                  <Link to="/page-4/">
-                    <Boton text="Deficit de Agua" />
-                  </Link>
-                  <Link to="/page-5/">
-                    <Boton text="Bicarbonato" />
-                  </Link>
-                  <Link to="/page-6/">
-                    <Boton text="Na Corregido" />
-                  </Link>
-                  <Link to="/page-7/">
-                    <Boton text="Alteplase" />
-                  </Link>
-                  <Link to="/page-8/">
-                    <Boton text="Osmolaridad" />
-                  </Link>
-                  <Link to="/page-9/">
-                    <Boton text="SIR" />
-                  </Link>
-                  <Link to="/page-10/">
-                    <Boton text="Hiperton" />
-                  </Link>
-                  <Link to="/page-11/">
-                    <Boton text="Liquidos" />
-                  </Link>
-                </ButtonWrapper>
-                <Footer />
-              </TextTop>
-            </Contentwrapper>
-          </Innerwrapper>
-        </Wrapper>
-      </Layout>
+      <Wrapper>
+        <Innerwrapper>
+          <Contentwrapper>
+            <Blue />
+            <SEO title="VallesMD" />
+            <TextTop>
+              <Title>Valles MD</Title>
+              <Subtitulo2>
+                ------------------------------------------------
+              </Subtitulo2>
+              <Subtitulo>Bienvenidos a la WebApp de formulas</Subtitulo>
+              <ButtonWrapper>
+                <Link to="/page-2">
+                  <Boton text="Dopamina" />
+                </Link>
+                <Link to="/page-3/">
+                  <Boton text="Dobutamina" />
+                </Link>
+                <Link to="/page-4/">
+                  <Boton text="Deficit de Agua" />
+                </Link>
+                <Link to="/page-5/">
+                  <Boton text="Bicarbonato" />
+                </Link>
+                <Link to="/page-6/">
+                  <Boton text="Na Corregido" />
+                </Link>
+                <Link to="/page-7/">
+                  <Boton text="Alteplase" />
+                </Link>
+                <Link to="/page-8/">
+                  <Boton text="Osmolaridad" />
+                </Link>
+                <Link to="/page-9/">
+                  <Boton text="SIR" />
+                </Link>
+                <Link to="/page-10/">
+                  <Boton text="Hiperton" />
+                </Link>
+                <Link to="/page-11/">
+                  <Boton text="Liquidos" />
+                </Link>
+              </ButtonWrapper>
+              <Footer />
+            </TextTop>
+          </Contentwrapper>
+        </Innerwrapper>
+      </Wrapper>
     )
   }
 }
@@ -68,14 +65,19 @@ class Inicio extends React.Component {
 export default Inicio
 
 const Wrapper = styled.div`
-  z-index: -3;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
 const Innerwrapper = styled.div`
-  height: 700px;
-  position: relative;
-  z-index: 1;
+  z-index: -1;
 `
-const Contentwrapper = styled.div``
+const Contentwrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+`
 const ButtonWrapper = styled.div`
   display: grid;
   grid-template-columns: 170px 170px;
@@ -85,13 +87,14 @@ const ButtonWrapper = styled.div`
   text-align: center;
   justify-content: center;
   padding-left: 40px;
-  z-index: 1;
+  z-index: 3;
 `
 const TextTop = styled.div`
   align-items: center;
   text-align: center;
   justify-content: center;
   padding-top: 30px;
+  z-index: 3;
 `
 const Title = styled.h1`
   font-size: 40px;
