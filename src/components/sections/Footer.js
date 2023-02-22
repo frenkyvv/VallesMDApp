@@ -8,8 +8,8 @@ function Foot() {
 export default Foot
 
 const Footer = styled.p`
-  font-size: 12px;
+  font-size: 8px;
   color: black;
-  font-weight: bold;
-  margin-top: 100px;
+  font-weight: 200;
+  padding-top: 200px;
 `

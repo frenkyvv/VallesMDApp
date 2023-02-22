@@ -4,8 +4,10 @@ import SEO from "../layout/seo"
 import { Link } from "gatsby"
 import WaveBackground from "../backgrounds/WaveBackground"
 import Boton from "../botones/BotonLink"
+import Boton2 from "../botones/BotonLink"
 import Footer from "../sections/Footer"
 import Blue from "../backgrounds/BlueBack"
+import Foot from "../sections/Footer"
 
 class Inicio extends React.Component {
   render() {
@@ -16,14 +18,13 @@ class Inicio extends React.Component {
             <Blue />
             <SEO title="VallesMD" />
             <TextTop>
-              <Title>Valles MD</Title>
-              <Subtitulo2>
-                ------------------------------------------------
-              </Subtitulo2>
-              <Subtitulo>Bienvenidos a la WebApp de formulas</Subtitulo>
+              <h1>Valles MD</h1>
+              <p>Bienvenidos a la WebApp de formulas</p>
+              <Subtitulo2>_________________________________________</Subtitulo2>
+
               <ButtonWrapper>
                 <Link to="/page-2">
-                  <Boton text="Dopamina" />
+                  <Boton2 text="Dopamina" />
                 </Link>
                 <Link to="/page-3/">
                   <Boton text="Dobutamina" />
@@ -53,7 +54,7 @@ class Inicio extends React.Component {
                   <Boton text="Liquidos" />
                 </Link>
               </ButtonWrapper>
-              <Footer />
+              <Foot />
             </TextTop>
           </Contentwrapper>
         </Innerwrapper>
@@ -65,9 +66,21 @@ class Inicio extends React.Component {
 export default Inicio
 
 const Wrapper = styled.div`
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background: linear-gradient(180deg, #e2f9fb 0%, #cfd6d6 70%);
+  text-align: center;
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+  }
+  p {
+    font-size: 16px;
+    margin-top: -10px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+  }
+  height: 800px;
+  z-index: 0;
+  position: relative;
 `
 const Innerwrapper = styled.div`
   z-index: -1;
@@ -76,7 +89,6 @@ const Contentwrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
 `
 const ButtonWrapper = styled.div`
   display: grid;
@@ -111,4 +123,5 @@ const Subtitulo = styled.h2`
 const Subtitulo2 = styled.h2`
   font-size: 16px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
 `

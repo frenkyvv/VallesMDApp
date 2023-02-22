@@ -10,15 +10,10 @@ function IndexPage() {
   return (
     <Layout>
       <SEO title="VallesMD" />
-      <Wrapper>
-        <Inicio />
-      </Wrapper>
+      <Inicio />
     </Layout>
   )
 }
 
 export default IndexPage
-const Wrapper = styled.div`
-  background: linear-gradient(180deg, #697ea0 0%, #69b6fd 100%);
-  z-index: -2;
-`
+
